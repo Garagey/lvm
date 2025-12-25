@@ -1,0 +1,67 @@
+rhel {
+	id = "Sb9TlL-it4y-veye-NRjX-MYMY-1rxf-b4U6hQ"
+	seqno = 3
+	format = "lvm2"
+	status = ["RESIZEABLE", "READ", "WRITE"]
+	flags = []
+	extent_size = 8192
+	max_lv = 0
+	max_pv = 0
+	metadata_copies = 0
+
+	physical_volumes {
+
+		pv0 {
+			id = "8ebY1H-dtUs-cFhp-Kgdt-p00d-N5fo-ldEd4L"
+			device = "/dev/sda3"
+			device_id_type = "sys_wwid"
+			device_id = "naa.5000c2997e6b76da"
+			status = ["ALLOCATABLE"]
+			flags = []
+			dev_size = 38612992
+			pe_start = 2048
+			pe_count = 4713
+		}
+	}
+
+	logical_volumes {
+
+		swap {
+			id = "hCgWWs-Pd81-LkpA-w2tH-vz1G-eNE7-9MuIaG"
+			status = ["READ", "WRITE", "VISIBLE"]
+			flags = []
+			creation_time = 1766666098
+			creation_host = "localhost.localdomain"
+			segment_count = 1
+
+			segment1 {
+				start_extent = 0
+				extent_count = 512
+				type = "striped"
+				stripe_count = 1
+				stripes = [
+					"pv0", 0
+				]
+			}
+		}
+
+		root {
+			id = "NpfLyM-jlH1-Zve6-sgMF-fIhA-jAZZ-z6JkdQ"
+			status = ["READ", "WRITE", "VISIBLE"]
+			flags = []
+			creation_time = 1766666098
+			creation_host = "localhost.localdomain"
+			segment_count = 1
+
+			segment1 {
+				start_extent = 0
+				extent_count = 4201
+				type = "striped"
+				stripe_count = 1
+				stripes = [
+					"pv0", 512
+				]
+			}
+		}
+	}
+}
