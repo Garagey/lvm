@@ -1,0 +1,59 @@
+rhel {
+	id = "n1KVha-FTUM-odUI-Kh1Z-U1Kx-kERq-PCuP4t"
+	seqno = 3
+	format = "lvm2"
+	status = ["RESIZEABLE", "READ", "WRITE"]
+	flags = []
+	extent_size = 8192
+	max_lv = 0
+	max_pv = 0
+	metadata_copies = 0
+
+	physical_volumes {
+		pv0 {
+			id = "kjKevu-5svz-x1BM-FoU5-onNS-AZEP-2gHpx8"
+			device = "/dev/nvme0n1p3"
+			status = ["ALLOCATABLE"]
+			flags = []
+			dev_size = 38612992
+			pe_start = 2048
+			pe_count = 4713
+		}
+	}
+
+	logical_volumes {
+		swap {
+			id = "Sf7aSS-XuEH-7ACw-aaOQ-kc7g-Y0Me-XDUPDZ"
+			status = ["READ", "WRITE", "VISIBLE"]
+			flags = []
+			creation_time = 1766650164
+			segment_count = 1
+			segment1 {
+				start_extent = 0
+				extent_count = 512
+				type = "striped"
+				stripe_count = 1
+				stripes = [
+					"pv0", 0
+				]
+			}
+		}
+
+		root {
+			id = "zlj1tD-4v8x-xDkh-oar8-Wuxh-z5aw-0EK93x"
+			status = ["READ", "WRITE", "VISIBLE"]
+			flags = []
+			creation_time = 1766650164
+			segment_count = 1
+			segment1 {
+				start_extent = 0
+				extent_count = 4201
+				type = "striped"
+				stripe_count = 1
+				stripes = [
+					"pv0", 512
+				]
+			}
+		}
+	}
+}
